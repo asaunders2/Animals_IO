@@ -103,7 +103,7 @@ public class AnimalIO {
         System.out.print("Enter Student name: ");
         try{
             name = inStream.readLine();
-        } catch(IOException e){
+        } catch(StringIndexOutOfBoundsException e){
             System.out.println(e + " is not a string");
         }
 

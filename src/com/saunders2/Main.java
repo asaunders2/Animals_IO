@@ -20,9 +20,9 @@ public class Main {
         //zoo.add(new Student(19, "Joe John Johnson"));
         //End Lines to Replace
 
-        zoo.add(addDog());
-        zoo.add(addCat());
-        zoo.add(addStudent());
+        zoo.add(AnimalIO.addDog());
+        zoo.add(AnimalIO.addCat());
+        zoo.add(AnimalIO.addStudent());
 
         for (Talkable thing: zoo) {
             printOut(thing);
