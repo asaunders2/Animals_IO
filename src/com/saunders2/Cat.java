@@ -1,5 +1,10 @@
 package com.saunders2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 /** Defines the attributes and behavior of the Cat object
  * @author mgreen14
  * @author asaunders2
@@ -53,7 +58,30 @@ public class Cat extends Pet implements Talkable {
         return "Cat: " + "name=" + name + " mousesKilled=" + mousesKilled;
     }
 
+    public static Cat addCat() throws IOException {
+        String name = "";
+        int miceKilled = 0;
 
+        BufferedReader inStream = new BufferedReader (new InputStreamReader(System.in));
+
+        System.out.print("Enter your Cat's name: ");
+        try{
+            name = inStream.readLine();
+        } catch(IOException e){
+            System.out.println(e + " is not a string");
+        }
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter number of mice killed ");
+        try{
+            miceKilled = scanner.nextInt();
+        }catch (NumberFormatException e){
+            System.out.println(e + " is not an integer");
+        }
+
+        return new Cat(miceKilled, name);
+    }
 
 }
 
