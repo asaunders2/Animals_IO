@@ -63,30 +63,5 @@ public class Cat extends Pet implements Talkable {
      * @throws IOException
      */
 
-    public static Cat addCat() throws IOException {
-        String name = "";
-        int miceKilled = 0;
-
-        BufferedReader inStream = new BufferedReader (new InputStreamReader(System.in));
-
-        System.out.print("Enter your Cat's name: ");
-        try{
-            name = inStream.readLine();
-        } catch(IOException e){
-            System.out.println(e + " is not a string");
-        }
-
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter number of mice killed ");
-        try{
-            miceKilled = scanner.nextInt();
-        }catch (NumberFormatException e){
-            System.out.println(e + " is not an integer");
-        }
-
-        return new Cat(miceKilled, name);
-    }
-
 }
 
