@@ -8,7 +8,7 @@ import java.util.Scanner;
 /** Defines the attributes and behavior of the Cat object
  * @author mgreen14
  * @author asaunders2
- * @version 1.1 9/1/2018
+ * @version 1.2 9/2/2018
  */
 
 public class Cat extends Pet implements Talkable {
@@ -57,6 +57,11 @@ public class Cat extends Pet implements Talkable {
     public String toString() {
         return "Cat: " + "name=" + name + " mousesKilled=" + mousesKilled;
     }
+
+    /** Creates a user defined version of the Cat object
+     * @return Returns an instance of the cat object using the addCat method
+     * @throws IOException
+     */
 
     public static Cat addCat() throws IOException {
         String name = "";
